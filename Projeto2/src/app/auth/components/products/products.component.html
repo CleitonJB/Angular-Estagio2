@@ -1,0 +1,37 @@
+<!-- <p>products works!</p> -->
+
+<!-- barra de pesquisa -->
+<!-- adicionar/excluir | cod | descrição do produto -->
+
+<div class="div_Table">
+
+    <h1>Lista de produtos</h1>
+
+    <div class="div_Pesquisar">
+        <input type="text" placeholder="Pesquisar produto..."/>
+
+        <button type="search" mat-stroked-button color="primary">Pesquisar</button>
+    </div>
+
+    <table>
+        <tr>
+            <th class="op"></th>
+            <th class="cod">Código</th>
+            <th class="descricao">Descrição do produto</th>
+        </tr>
+    
+        <tr *ngFor="let p of produtos">
+            <button type="search" mat-stroked-button color="primary"> x </button>
+            <td> {{ p.TABPROD_seq_tabprod }}    </td>
+            <td> {{ p.TABPROD_desc }}           </td>
+        </tr>
+    </table>
+</div>
+
+<!--
+<div *ngFor="let p of produtos">
+    <h2>
+        {{ p.TABPROD_seq_tabprod }} | {{ p.TABPROD_desc }}
+    </h2>
+</div>
+-->

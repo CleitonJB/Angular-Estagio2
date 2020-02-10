@@ -1,0 +1,21 @@
+mat-form-field{
+    width: 80%;
+}
+
+.div_Login{
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    padding: 22px 0px;
+}
+
+.div_resetPassword a{
+    color: #673ab7;
+    text-decoration: none;
+}
+
+.div_bt_submit{
+    margin: 20px;
+}

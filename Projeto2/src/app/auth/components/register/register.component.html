@@ -1,0 +1,60 @@
+<!-- <p>register works!</p> -->
+
+<div class="alert alert-danger" *ngIf="errorMsg">
+    {{ errorMsg }}
+</div>
+
+<div class="div_Register">
+    <form #f="ngForm" (ngSubmit)="registerUser(f)">
+
+        <!-- {{ f.value | json }} <hr> {{ usuario | json }} -->
+
+        <h1>Register</h1>
+
+        <!-- NOME -->
+        <mat-form-field appearance="outline">
+            <mat-label>Nome</mat-label>
+            <input type="text" required matInput placeholder="Digite seu nome..." name="OPER_login" [(ngModel)]="usuario.OPER_login" >
+            <mat-icon matSuffix>face</mat-icon>
+        </mat-form-field>
+
+        <!-- SENHA -->
+        <mat-form-field appearance="outline">
+            <mat-label>Senha</mat-label>
+            <input type="password" required matInput placeholder="Digite sua senha..." name="OPER_senha" [(ngModel)]="usuario.OPER_senha" >
+            <mat-icon matSuffix>face</mat-icon>
+        </mat-form-field>
+
+        <!-- Nome Operador -->
+        <mat-form-field appearance="outline">
+            <mat-label>Nome de Operador</mat-label>
+            <input type="text" required matInput placeholder="Digite seu nome de operador..." name="OPER_nome_operador" [(ngModel)]="usuario.OPER_nome_operador" >
+            <mat-icon matSuffix>face</mat-icon>
+        </mat-form-field>
+
+
+        <!-- EMAIL -->
+        <!--
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput placeholder="Digite seu email..." required name="Email" ngModel #Email="ngModel">
+            <mat-icon matSuffix>face</mat-icon>
+            <mat-hint>Hint</mat-hint> 
+        </mat-form-field>
+        -->
+
+        <!-- SENHA 
+        <mat-form-field appearance="outline">
+            <mat-label>Senha</mat-label>
+            <input ngModel name="OPER_senha" matInput placeholder="Digite sua senha..." [type]="hide ? 'text' : 'password'" required name="Senha" ngModel #Senha="ngModel">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+            </button>
+        </mat-form-field>
+        -->
+
+        <div class="div_bt_submit">
+            <button type="submit" [disabled]="f.invalid" mat-stroked-button color="primary">Register <mat-icon matSuffix>face</mat-icon></button>
+        </div>
+    </form>
+</div>
